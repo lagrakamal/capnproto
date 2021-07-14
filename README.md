@@ -4,12 +4,12 @@ We are going in this tutorial to explain how to install all required materials a
 
 ## installing Intel-SGX
 
-To install intel-SGX just follow the instructions [https://github.com/intel/linux-sgx](here).
+To install intel-SGX just follow the instructions [here](https://github.com/intel/linux-sgx).
 If you are going to run Graphene with SGX make sure you installed Intel SGX driver
 
 ## Installing Graphene-oscarlab
 
-To install Graphene just follow the instructions [https://graphene.readthedocs.io/en/latest/quickstart.html](here).
+To install Graphene just follow the instructions [here](https://graphene.readthedocs.io/en/latest/quickstart.html).
 Be sure your Ubuntu kernel is not lower than 5.9 and also you installed all "Common dependencies" before running graphene application without SGX, and "Dependencies for SGX" if you are going to run Graphene with SGX.
 
 I worked on Ubuntu with kernel version 5.11.
@@ -307,18 +307,5 @@ Nice, can now use graphene-direct or graphene-sgx like in the previous steps, to
 
 ### More information
 
-For more informations about manifest syntax visit the Graphene official documentation[https://graphene.readthedocs.io/en/latest/quickstart.html](here).
-For more Graphene Examples take visit [https://github.com/enclaive/grphn_wiki](git@grphn_wiki) and [https://github.com/enclaive/grphn_wiki/wiki](Wiki tutorials) 
-
-
-
-
-
-
-
-
-
-
-
-
-
+For more informations about manifest syntax visit the Graphene official documentation[here](https://graphene.readthedocs.io/en/latest/quickstart.html).
+For more Graphene Examples take visit [git@grphn_wiki](https://github.com/enclaive/grphn_wiki) and [Wiki tutorials](https://github.com/enclaive/grphn_wiki/wiki) 
