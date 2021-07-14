@@ -1,22 +1,22 @@
 # Tutorial: Creating Graphene manifests to run capnproto Examples:
 
-I'm trying in this tutorial to explain how to install prerequirements and to create manifests to be able to run your application Examples in Graphene.  
+We are going in this tutorial to explain how to install all required materials and how to create manifests to be able to run our capnproto Examples in Graphene.  
 
 ## installing Intel-SGX
 
-To install intel-SGX just follow the instructions here.
+To install intel-SGX just follow the instructions [https://github.com/intel/linux-sgx](here).
 If you are going to run Graphene with SGX make sure you installed Intel SGX driver
 
 ## Installing Graphene-oscarlab
 
-To install Graphene from git just follow the instructions here.
+To install Graphene just follow the instructions [https://graphene.readthedocs.io/en/latest/quickstart.html](here).
 Be sure your Ubuntu kernel is not lower than 5.9 and also you installed all "Common dependencies" before running graphene application without SGX, and "Dependencies for SGX" if you are going to run Graphene with SGX.
 
 I worked on Ubuntu with kernel version 5.11.
 
 ### Create a simple manifest for capnproto and run the adressbook test in Graphene.
 
-After installing all required stuff!!!!. We are going to build capnproto simple Adressbook Example provided from Graphene. 
+After installing all required stuff. We are going to build capnproto simple Adressbook Example provided from Graphene. 
 Move to /path/to/graphene directory, then to the Examples directory and then capnproto directory.
 
 The Path 
@@ -29,14 +29,15 @@ If you take a look on Readme file, you will be asked to install the following Li
 make
 ~~~
 
-After making files a manifest will be automatic generated.
-You can now run Adressbook example direct or without SGX
-
-To run the Example with SGX, be sure that SGX is !!!!!!:
+To enable SGX
 
 ~~~build addressbook examples and the manifest
 make SGX=1
 ~~~
+
+After making files a manifest will be automatic generated.
+You can now run Adressbook example direct or without SGX
+
 
 #### run Adressbook in non-SGX Graphene
 
@@ -89,6 +90,7 @@ loader.log_level = "[none|error|warning|debug|trace|all]"
 
 loader.log_file = "[PATH]"
 ~~~
+Set to "debug" if you want to get information about Graphene’s operation and internals while runnig your app. it will enable all messages of type error, warning and debug
 
 In our created manifest, the Default value will be setted:
 
@@ -295,13 +297,18 @@ fs.mount.libcapnp.path = "/lib"
 fs.mount.libcapnp.uri = "file:/usr/local/lib"
 ~~~
 
-then change the entrypoint to the calculator executable application:
+then change the entrypoint to the calculator-server executable application:
 
 libos.entrypoint = "path/to/calculator-server"
 
 you can do the same steps to create a manifest for the client.
 
-Nice, can now use graphene-direct or graphene-sgx to run the Example.
+Nice, can now use graphene-direct or graphene-sgx like in the previous steps, to run the Example in Graphene.
+
+### More information
+
+For more informations about manifest syntax visit the Graphene official documentation[https://graphene.readthedocs.io/en/latest/quickstart.html](here).
+For more Graphene Examples take visit [https://github.com/enclaive/grphn_wiki](git@grphn_wiki) and [https://github.com/enclaive/grphn_wiki/wiki](Wiki tutorials) 
 
 
 
